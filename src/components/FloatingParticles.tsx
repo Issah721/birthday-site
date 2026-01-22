@@ -1,10 +1,10 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 const FloatingParticles = () => {
-  const [particles, setParticles] = useState<JSX.Element[]>([]);
+  const [particles, setParticles] = useState<React.ReactElement[]>([]);
 
   useEffect(() => {
     const generateParticles = () => {
