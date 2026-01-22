@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BIRTHDAY_CONTENT } from "@/lib/birthdayData";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -64,7 +64,7 @@ const Countdown = () => {
   }, [timeLeft, mounted, dailyClues.length]);
 
 
-  const timerComponents: JSX.Element[] = [];
+  const timerComponents: React.ReactElement[] = [];
 
   // Only render timer components if mounted and time is left
   if (mounted && (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0)) {
